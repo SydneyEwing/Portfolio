@@ -1,111 +1,192 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <title>syd site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Sydney Ewing</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom Navbar Styling */
+        .custom-navbar {
+            background-color: #8f767c !important;
+        }
+        .custom-navbar .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .custom-navbar .navbar-nav .nav-link:hover {
+            color: #f0e6e6 !important;
+        }
+        .custom-navbar .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+        }
 
+        /* Image Styling */
+        .profile-img {
+            max-width: 360px; 
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-img:hover {
+            transform: scale(1.1); /* Slightly enlarges on hover */
+        }
+
+        /* Box Styling */
+        .about-box, .work-box {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .work-item {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .work-item:hover {
+            transform: scale(1.02);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #8f767c;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+        .footer a {
+            color: #f0e6e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-    <header>
-        <h1 style="font-size: 70px;">Sydney Ewing</h1>
+    <!-- Header -->
+    <header class="text-white text-center py-4" style="background-color: #8f767c;">
+        <h1>Sydney Ewing</h1>
+        <p>Information Systems Student | QA & Web Development </p>
     </header>
 
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <!-- About Me Section -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="./img_1107.jpg" class="img-fluid profile-img shadow-sm" alt="Sydney Ewing">
+            </div>
+            <div class="col-md-8 work-item about-box">
+                <h2>About Me</h2>
+                <p>I'm a senior at the University of Utah studying Information Systems at the David Eccles School of Business. I have experience in both manual and automated testing, especially using Playwright for web application testing. I've worked on writing and running test scripts, doing regression and unit testing, and making testing more efficient.</p>
 
-    <div class="profile-container">
-        <img src="./img_1107.jpg" style="width: 280px;height:337px;">
-        <div class="profile-text">
-            <h2>Hello!</h2>
-            <p> My name is Sydney Ewing, a student and emerging digital enthusiast with a passion for photography and
-                web development. I'm currently pursuing a degree in Information Systems at the University of Utah, where
-                I combine my technical knowledge with artistic flair to create captivating visuals and functional
-                websites.
-
-                In my free time, I love capturing moments with my film camera, especially scenes from the outdoors and
-                cherished moments with friends and family. My photography adds a personal touch to my creative projects,
-                infusing them with warmth and emotion.
-
-                As a web development beginner, I'm navigating the learning curve with enthusiasm and resilience. I'm
-                honing my skills in HTML and CSS, building my first website and experimenting with design elements to
-                bring my visions to life. I also have experience with Figma and Canva, which I use to design and create
-                visually appealing graphics for my projects. While I haven't yet started using JavaScript, I'm eager to
-                expand my skillset and integrate dynamic features into my work.
-
-                My journey reflects my commitment to growth and my passion for blending technology with creativity. As I
-                continue to learn and refine my craft, my projects are sure to leave a lasting impact.</p>
-        </div>
-    </div>
-    
-
-    <div class="second-container">
-        <div class="work-content">
-            <h2> My Work</h2>
-            <p>I have had the opportunity to work on a variety of projects that have allowed me to apply my design and
-                creative skills. Most notably, I created engaging social media posts for a new mobile application, where
-                I focused on delivering visually striking content that effectively communicated the app's features and
-                benefits.
-
-                For my coursework, I also took on the task of creating advertisements for a perfume line. This involved
-                crafting eye-catching visuals that conveyed the essence of the fragrance and appealed to the target
-                audience. Through this project, I honed my ability to blend design aesthetics with marketing strategies.
-
-                Beyond formal projects, I frequently lend my skills to friends and family, who often ask me to create
-                collages and other artistic projects for personal or celebratory purposes. I'm always happy to help out
-                and use these opportunities to experiment with new design techniques and creative concepts. This
-                collaborative work allows me to continuously refine my craft and expand my artistic repertoire.</p>
-            <p>In the future, I aspire to add different websites to this list, designing and developing sites that not
-                only look great but are also user-friendly and responsive. This goal will enable me to further blend my
-                interests in technology and design, while providing me with new challenges and opportunities for growth.
-            </p>
-        </div>
-
-    </div>
-    <div class="scroll-container">
-        <img src="./26TH (1).png" style="width: 500px;height: 320px;">
-        <img src="./Perfume2.png" style="width: 250px;height: 320px;">
-        <img src="./Work3.png" style="width: 250px;height: 320px;">
-        <img src="./Perfume1.png" style="width: 250px;height: 320px;">
-        <img src="./Work1.png" style="width: 250px;height:320px;">
-    </div>
-
-    <div class="btn-container">
-        <button id="mybtn">Contact</button>
-        <div id="mymodal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Contact:</h2>
-                <p><b>Email:</b> Sydneyewing1@gmail.com</p>
-                <p><b>LinkedIn</b><a href="linkedin.com/in/syndeewing"> Sydney Ewing</a></p>
+                <p>Beyond QA testing, I also have experience in web development and have built projects using HTML, CSS, JavaScript, Node.js, and Python.</p>
+                <p>Outside of tech, I love spending time outdoors with friends and family, exploring new places, and making great memories.</p>
             </div>
         </div>
     </div>
 
- 
+    <!-- Work Section -->
+    <div class="container my-5">
+        <div class="work-box">
+            <h2 class="text-center mb-4">My Work</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="p-3 border rounded shadow-sm work-item" style="max-height: 390px; overflow-y: auto;">
+                        <h3>QA Analyst (Internship)</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; margin-top: -5px;">January 2025 - Present</p>
+                        <p>As a QA Analyst Intern at Data Quality Co-op, I specialize in both manual and automated testing to ensure software quality. My work includes:</p>
+                        <ul>
+                            <li>Automating end-to-end testing for the corporate website using Playwright.</li>
+                            <li>Conducting manual testing, unit testing, and regression testing to identify bugs.</li>
+                            <li>Debugging and optimizing test scripts for efficiency and reliability.</li>
+                            <li>Ensuring seamless user experiences across multiple browsers.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                    
+                    
 
+                <div class="col-md-4">
+                    <div class="p-3 border rounded shadow-sm work-item" style="max-height: 390px; overflow-y: auto;">
+                        <h3>David Eccles School of Business Dean's Assistant</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; margin-top: -5px;">June 2023 - Present</p>
+                        <p>As a Dean’s Assistant, I support administrative operations at the David Eccles School of Business by:</p>
+                        <ul>
+                            <li>Providing customer service to visitors and students, handling sensitive information professionally.</li>
+                            <li>Assisting in daily administrative tasks to keep office operations running smoothly.</li>
+                            <li>Collaborating on special projects to improve efficiency and streamline office workflows.</li>
+                            <li>Coordinating event logistics and supporting faculty with various tasks.</li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="col-md-4">
+                    <div class="p-3 border rounded shadow-sm work-item" style="max-height: 390px; overflow-y: auto;">
+                        <h3>Information Systems, David Eccles School of Business</h3>
+                        <p class="text-muted" style="font-size: 0.8rem; margin-top: -5px;">Graduation Date: May 3, 2025</p>
+                        <p>My Bachelor of Science in Information Systems at the University of Utah has equipped me with a strong foundation in business and technology. I have developed skills in:</p>
+                        <ul>
+                            <li><strong>Systems Analysis & Design</strong> – Evaluating business needs and creating IT solutions.</li>
+                            <li><strong>Database Management</strong> – Designing and managing relational databases efficiently.</li>
+                            <li><strong>Networking & Cloud Computing</strong> – Understanding modern IT infrastructure and cloud technologies.</li>
+                            <li><strong>Project Management</strong> – Managing technology projects from planning to execution.</li>
+                            <li><strong>Business Process Optimization</strong> – Enhancing business operations with technology-driven solutions.</li>
+                            <li><strong>Data Analysis & Decision Making</strong> – Leveraging data for strategic business insights.</li>
+                            <li><strong>Critical Thinking</strong> – Solving complex business problems with innovative IT approaches.</li>
+                            <li><strong>Team Collaboration</strong> – Working effectively in diverse teams on technology projects.</li>
+                            <li><strong>Leadership</strong> – Leading IT initiatives and driving successful project outcomes.</li>
+                        </ul>
+                        <p>Through this program, I have gained the expertise to bridge the gap between business and technology. My passion lies in QA testing and data engineering, ensuring reliable, scalable, and innovative IT solutions.</p>
+                    </div>
+                </div>
+                
+                
+               
+                
+                
+                
 
+                
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>Sydney Ewing | <a href="mailto:sydneyewing1@gmail.com">Email</a> |  
+                <a href="https://www.linkedin.com/in/sydneewing/" target="_blank">LinkedIn</a> |  
+                <a href="https://github.com/sydneyewing" target="_blank">GitHub</a></p>
+        </div>
+    </footer>
 
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
-
-
-
-<script src="./script.js"></script>
