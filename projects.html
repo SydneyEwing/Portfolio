@@ -28,10 +28,10 @@
 
         /* Project Card Styling */
         .project-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             display: flex;
             flex-direction: column;
             height: 100%;
+            min-height: 450px; /* Ensures all cards start at the same height */
         }
 
         .project-card:hover {
@@ -47,7 +47,7 @@
             border-top-right-radius: 10px;
         }
 
-        /* Ensure all card bodies expand equally */
+        /* Ensures equal height for card bodies */
         .project-card .card-body {
             flex-grow: 1;
             display: flex;
@@ -67,6 +67,11 @@
 
         .custom-btn:hover {
             background-color: #735e63;
+        }
+
+        /* Prevents collapse animation from affecting card height */
+        .collapse {
+            transition: height 0.3s ease-in-out;
         }
 
         /* Footer Styling */
@@ -122,39 +127,35 @@
 
             <!-- Project 1 -->
             <div class="col">
-                <div class="card project-card border-0 shadow-sm h-100">
+                <div class="card project-card border-0 shadow-sm">
                     <img src="./pi.jpg" class="project-img" alt="Automatic Plant Watering System">
                     <div class="card-body">
                         <h3 class="card-title">Automatic Plant Watering System</h3>
                         <p class="card-text">Developed a smart irrigation system using Raspberry Pi and Python.</p>
-                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
-                            data-bs-target="#project1Details" onclick="toggleButtonText(this)">View More</button>
-                        <div class="collapse mt-3" id="project1Details">
-                            <p>Implemented real-time soil moisture monitoring and automation.</p>
-                        </div>
+                        <ul>
+                            <li>Implemented real-time soil moisture monitoring and automation.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="col">
-                <div class="card project-card border-0 shadow-sm h-100">
+                <div class="card project-card border-0 shadow-sm">
                     <img src="FigmaMockup.png" class="project-img" alt="Personal Website">
                     <div class="card-body">
                         <h3 class="card-title">Personal Website</h3>
                         <p class="card-text">Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript.</p>
-                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
-                            data-bs-target="#project2Details" onclick="toggleButtonText(this)">View More</button>
-                        <div class="collapse mt-3" id="project2Details">
-                            <p>Features interactive elements and a modern design.</p>
-                        </div>
+                        <ul>
+                            <li>Features interactive elements and a modern design.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="col">
-                <div class="card project-card border-0 shadow-sm h-100">
+                <div class="card project-card border-0 shadow-sm">
                     <img src="postman.png" class="project-img" alt="Postman API Testing">
                     <div class="card-body">
                         <h3 class="card-title">Postman API Testing - Bookstore API</h3>
@@ -169,22 +170,20 @@
             </div>
 
             <!-- Project 4 -->
-
-
             <div class="col">
-                <div class="card project-card border-0 shadow-sm h-100">
+                <div class="card project-card border-0 shadow-sm">
                     <img src="playwrite.png" class="project-img" alt="Postman API Testing">
                     <div class="card-body">
                         <h3 class="card-title">Playwright Automated Testing - Corporate Website</h3>
-                        <p class="card-text">Developed and executed end-to-end UI tests for a corporate website using Playwright.</p>
-                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse" data-bs-target="#project4Details" onclick="toggleButtonText(this)">View More</button>
+                        <p class="card-text">Developed and executed end-to-end UI tests for a corporate website.</p>
+                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
+                            data-bs-target="#project4Details" onclick="toggleButtonText(this)">View More</button>
                         <div class="collapse mt-3" id="project4Details">
-                            <p>Designed an automated test suite to validate core website functionalities, including navigation, form submissions, authentication, and responsiveness across multiple browsers. Improved test efficiency by integrating Playwright with CI/CD pipelines for continuous testing.</p>
+                            <p>Validated site navigation, authentication, and multi-browser responsiveness.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
 
         </div>
     </div>
