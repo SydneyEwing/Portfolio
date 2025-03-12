@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,33 @@
         .custom-navbar {
             background-color: #8f767c !important;
         }
+
         .custom-navbar .navbar-nav .nav-link {
             color: white !important;
         }
+
         .custom-navbar .navbar-nav .nav-link:hover {
             color: #f0e6e6 !important;
         }
+
         .custom-navbar .navbar-brand {
             color: white !important;
             font-weight: bold;
         }
 
-        /* Custom Styling */
+        /* Project Card Styling */
         .project-card {
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .project-img {
             width: 100%;
             height: 200px;
@@ -38,17 +47,26 @@
             border-top-right-radius: 10px;
         }
 
-        /* Custom Button Styling */
+        /* Ensure all card bodies expand equally */
+        .project-card .card-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Ensures buttons stay aligned at the bottom */
         .custom-btn {
-            background-color: #8f767c; /* Custom color */
-            color: white; /* Text color */
+            background-color: #8f767c;
+            color: white;
             border: none;
             padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 0.3s ease-in-out;
+            margin-top: auto;
         }
+
         .custom-btn:hover {
-            background-color: #735e63; /* Darker shade for hover effect */
+            background-color: #735e63;
         }
 
         /* Footer Styling */
@@ -59,17 +77,20 @@
             padding: 15px 0;
             margin-top: 30px;
         }
+
         .footer a {
             color: #f0e6e6;
             text-decoration: none;
             font-weight: bold;
         }
+
         .footer a:hover {
             color: white;
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -98,39 +119,67 @@
     <div class="container my-5">
         <h2 class="text-center mb-4">Highlighted Projects</h2>
         <div class="row row-cols-1 row-cols-md-2 g-4">
-            
+
             <!-- Project 1 -->
             <div class="col">
-                <div class="card project-card border-0 shadow-sm">
+                <div class="card project-card border-0 shadow-sm h-100">
                     <img src="./pi.jpg" class="project-img" alt="Automatic Plant Watering System">
                     <div class="card-body">
                         <h3 class="card-title">Automatic Plant Watering System</h3>
-                        <p class="card-text">Developed a smart irrigation system using Raspberry Pi and Python to monitor soil moisture and automate watering.</p>
-            
-                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse" data-bs-target="#project1Details" onclick="toggleButtonText(this)">View More</button>
+                        <p class="card-text">Developed a smart irrigation system using Raspberry Pi and Python.</p>
+                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
+                            data-bs-target="#project1Details" onclick="toggleButtonText(this)">View More</button>
                         <div class="collapse mt-3" id="project1Details">
-                            <p>Implemented real-time soil moisture monitoring with an HTML-based interface for system control and data visualization.</p>
-                            <ul>
-                                <li>Built an interactive web-based dashboard for monitoring.</li>
-                                <li>Developed Python scripts to automate irrigation based on sensor data.</li>
-                                <li>Tested and optimized system performance for accuracy and efficiency.</li>
-                            </ul>
+                            <p>Implemented real-time soil moisture monitoring and automation.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
 
             <!-- Project 2 -->
             <div class="col">
-                <div class="card project-card border-0 shadow-sm">
+                <div class="card project-card border-0 shadow-sm h-100">
                     <img src="FigmaMockup.png" class="project-img" alt="Personal Website">
                     <div class="card-body">
                         <h3 class="card-title">Personal Website</h3>
                         <p class="card-text">Designed and developed a responsive portfolio website using HTML, CSS, and JavaScript.</p>
-                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse" data-bs-target="#project2Details" onclick="toggleButtonText(this)">View More</button>
+                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
+                            data-bs-target="#project2Details" onclick="toggleButtonText(this)">View More</button>
                         <div class="collapse mt-3" id="project2Details">
-                            <p>Features interactive elements, smooth navigation, and a modern design to highlight my projects, skills, and experience.</p>
+                            <p>Features interactive elements and a modern design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col">
+                <div class="card project-card border-0 shadow-sm h-100">
+                    <img src="postman.png" class="project-img" alt="Postman API Testing">
+                    <div class="card-body">
+                        <h3 class="card-title">Postman API Testing - Bookstore API</h3>
+                        <p class="card-text">Developed and executed automated API tests for a bookstore ordering system.</p>
+                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse"
+                            data-bs-target="#project3Details" onclick="toggleButtonText(this)">View More</button>
+                        <div class="collapse mt-3" id="project3Details">
+                            <p>Implemented structured API testing for CRUD operations and negative test cases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+
+
+            <div class="col">
+                <div class="card project-card border-0 shadow-sm h-100">
+                    <img src="playwrite.png" class="project-img" alt="Postman API Testing">
+                    <div class="card-body">
+                        <h3 class="card-title">Playwright Automated Testing - Corporate Website</h3>
+                        <p class="card-text">Developed and executed end-to-end UI tests for a corporate website using Playwright.</p>
+                        <button class="custom-btn toggle-btn" data-bs-toggle="collapse" data-bs-target="#project4Details" onclick="toggleButtonText(this)">View More</button>
+                        <div class="collapse mt-3" id="project4Details">
+                            <p>Designed an automated test suite to validate core website functionalities, including navigation, form submissions, authentication, and responsiveness across multiple browsers. Improved test efficiency by integrating Playwright with CI/CD pipelines for continuous testing.</p>
                         </div>
                     </div>
                 </div>
@@ -140,23 +189,16 @@
         </div>
     </div>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>Sydney Ewing |  
-                <a href="mailto:sydneyewing1@gmail.com">Email</a> |  
-                <a href="https://www.linkedin.com/in/sydneewing/" target="_blank">LinkedIn</a> |  
-                <a href="https://github.com/sydneyewing" target="_blank">GitHub</a></p>
+            <p>Sydney Ewing | <a href="mailto:sydneyewing1@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/sydneewing/" target="_blank">LinkedIn</a> | <a href="https://github.com/sydneyewing" target="_blank">GitHub</a></p>
         </div>
     </footer>
 
     <script>
         function toggleButtonText(button) {
-            if (button.innerText === "View More") {
-                button.innerText = "View Less";
-            } else {
-                button.innerText = "View More";
-            }
+            button.innerText = button.innerText === "View More" ? "View Less" : "View More";
         }
     </script>
 
